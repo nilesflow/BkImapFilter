@@ -1,0 +1,38 @@
+[General]
+;インストーラダイアログのタイトルに書かれる文字です
+;またコントロールパネルのアプリケーションの追加と削除のリストに表示される
+;ソフト名にも使用されます
+;※必須
+Name=B2 PlugIn - IMAP Filter
+
+;HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall
+;に作られるキー名です。他のソフトと重複しない名前を指定してください
+;※必須
+UninstallKey=B2PlugIn_IMAPFilterYF
+
+;インストール終了後に表示されるドキュメントファイル名です
+;※任意
+Readme=BkImapFilter.txt
+;↓このようにすることにより、システムの言語によって表示されするドキュメン
+;  トを制御可能。詳細は INF.TXT 参照。
+;ReadmeJPN=LargeAttach-jpn.txt
+
+[Files]
+;コピーしたいファイルを以下のように連番を付けて列挙してください
+;ここに書かれたファイルは PlugIns フォルダの下にコピーされます
+;※0番目は必須。他は任意。
+0=BkIMAPFilter.dll
+;1=LargeAttach.txt
+;↑上にある Readme キーで記述したものは必ずコピーされることに注意。
+;  よって、この場合はここに書いたキーは意味がない。(書いても構わない)
+;2=LargeAttach\Help.hlp
+;↑このような指定を許されるようにした
+;  アーカイブを作る時に LargeAttach というフォルダ付きで圧縮しなければな
+;  らない。
+
+[Delete]
+;追加して削除したいファイルがあるときは、以下のように連番を付けて
+;列挙してください
+;※任意
+0=BkImapFilter.ini
+;1=LargeAttach.gid
